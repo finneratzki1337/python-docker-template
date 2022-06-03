@@ -1,0 +1,7 @@
+venv/
+*__pycache__*
+__pycache__
+.env
+
+config/*
+!config/creds_template.conf

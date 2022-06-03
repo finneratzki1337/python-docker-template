@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  container-app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000
+    #Directly attach working dir to container
+    #volumes:
+    #  - ./app:/code/
+    
+    restart: unless-stopped
+    
+    # environment variables from .env file
+    environment:
+      USER_NAME: ${USER_NAME}
+      USER_PASSWORD: ${USER_PASSWORD}
