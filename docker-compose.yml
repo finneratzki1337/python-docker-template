@@ -4,15 +4,14 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    ports:
-      - 5000:5000
+    #If needed, network mode to host e.g. when awaiting responses to request and running on public server
+    #network_mode: "host"
+    #If needed, expose external port
+    #ports:
+    #  - ${EXT_PORT}:${EXT_PORT}
     #Directly attach working dir to container
     #volumes:
     #  - ./app:/code/
     
     restart: unless-stopped
-    
-    # environment variables from .env file
-    environment:
-      USER_NAME: ${USER_NAME}
-      USER_PASSWORD: ${USER_PASSWORD}
+    env_file: .env
