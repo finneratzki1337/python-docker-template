@@ -7,7 +7,7 @@ python -m venv venv
 ~~~
 Windows:
 ~~~
-venv/Scripts/activat
+venv/Scripts/activate
 ~~~
 Linux:
 ~~~
