@@ -4,4 +4,4 @@ __pycache__
 .env
 
 config/*
-!config/creds_template.conf
+!config/conf_template.conf

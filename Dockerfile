@@ -9,16 +9,19 @@ RUN apt-get install -y python3 && apt-get install -y python3-pip
 WORKDIR /code
 
 #Adding the whole folder
-ADD . /code
 
-RUN ls
 
 #Or specifically adding requirements txt only
-#COPY requirements.txt .
+COPY requirements.txt .
 #COPY app.py .
 
 RUN pip3 install -r requirements.txt
+#Add new user for security
 RUN useradd -ms /bin/bash exec-user
+ADD . /code
+#If needed writeable workdir for user (e.g. files or something)
+#RUN chown exec-user files
+
 #Switching user for security reasons
 USER exec-user
 
