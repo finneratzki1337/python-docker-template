@@ -1,6 +1,7 @@
 # Template for Python Apps with local development running in a Docker container
 ##
 Pull and launch either within virtual environment
+~~~
     python -m venv venv
 Windows:
     venv/Scripts/activate
@@ -13,6 +14,7 @@ Launch app:
 
 Or simply launch Docker Container
     docker-compose up --build
+~~~
 ## Environment Variables
 e.g. containing credentials. .env files will be ignored by .gitignore. Copy the template file and rename to .en
 ## Config
