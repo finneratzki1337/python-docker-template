@@ -13,5 +13,6 @@ services:
     #volumes:
     #  - ./app:/code/
     
-    restart: unless-stopped
+    #If needed, let container restart infinitely
+    #restart: unless-stopped
     env_file: .env

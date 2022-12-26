@@ -25,4 +25,7 @@ ADD . /code
 #Switching user for security reasons
 USER exec-user
 
-CMD [ "python3", "app.py" ]
+#Having all tests for testfolder being run
+RUN pytest
+
+CMD [ "python3", "src/app.py" ]
