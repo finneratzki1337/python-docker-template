@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 # importing own modules
-from src.module_template.module_class import SampleClass
+from module_template.module_class import SampleClass
 
 # MY_ENV_VAR = os.getenv('MY_ENV_VAR')
 
