@@ -1,9 +1,10 @@
+"""The main file that executes the main() method."""
 from configparser import ConfigParser
 import os
 from dotenv import load_dotenv
 
 # importing own modules
-from module_template.module_class import SampleClass
+from src.module_template.module_class import SampleClass
 
 # MY_ENV_VAR = os.getenv('MY_ENV_VAR')
 
@@ -20,6 +21,8 @@ my_setting = config["GENERAL"]["MY_SETTING"]
 
 
 def main():
+    """main method that executes the whole application.
+    """
     print(f"{user_name}/{password}")
     print(my_setting)
     my_obj = SampleClass()
